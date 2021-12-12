@@ -1,6 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+#Idea project folder
+.idea/*
+
 # Compiled Object files
 *.slo
 *.lo
@@ -73,6 +76,3 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 /Plugins/Developer/RiderLink/
-
-#Idea project folder
-.idea/*
