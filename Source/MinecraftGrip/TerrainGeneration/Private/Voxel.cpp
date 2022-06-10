@@ -62,7 +62,7 @@ bool FVoxel::IsVoxelInWorld(const FVector& Position)
 		&& Position.Z >= 0 && Position.Z < FChunkData::ChunkHeightSize;
 }
 
-ETextureType FVoxel::GetTextureType(const int32 InSideIndex) const
+EMinecraftTextureType FVoxel::GetTextureType(const int32 InSideIndex) const
 {
 	switch (InSideIndex)
 	{
@@ -107,8 +107,8 @@ void FVoxel::InitializeVoxel(const FVector& InPosition)
 }
 
 void FVoxel::InitializeVoxelType(const bool InbIsSolid, const EBlockType InBlockType, const float InDestroyTime,
-                                 const ETextureType InSideTexture, const ETextureType InTopTexture,
-                                 const ETextureType InBottomTexture)
+                                 const EMinecraftTextureType InSideTexture, const EMinecraftTextureType InTopTexture,
+                                 const EMinecraftTextureType InBottomTexture)
 {
 	SideTexture = InSideTexture;
 	TopTexture = InTopTexture;

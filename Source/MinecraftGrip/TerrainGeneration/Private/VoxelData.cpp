@@ -34,10 +34,10 @@ TArray<FIntVector> FVoxelData::SideChecks
 	FIntVector{100, 0, 0},
 };
 
-TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
+TMap<EMinecraftTextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 {
 	{
-		ETextureType::StoneTexture, TArray<FVector2D>{
+		EMinecraftTextureType::StoneTexture, TArray<FVector2D>{
 			FVector2D(0.25f, 0.f),
 			FVector2D(0.f, 0.f),
 			FVector2D(0.f, 0.25f),
@@ -45,7 +45,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		},
 	},
 	{
-		ETextureType::DirtTexture, TArray<FVector2D>{
+		EMinecraftTextureType::DirtTexture, TArray<FVector2D>{
 			FVector2D(0.5f, 0.f),
 			FVector2D(0.25f, 0.f),
 			FVector2D(0.25f, 0.25f),
@@ -53,7 +53,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::GrassDirtTexture, TArray<FVector2D>{
+		EMinecraftTextureType::GrassDirtTexture, TArray<FVector2D>{
 			FVector2D(0.5f, 0.f),
 			FVector2D(0.5f, 0.25f),
 			FVector2D(0.75f, 0.25f),
@@ -61,7 +61,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::SnowDirtTexture, TArray<FVector2D>{
+		EMinecraftTextureType::SnowDirtTexture, TArray<FVector2D>{
 			FVector2D(0.75f, 0.f),
 			FVector2D(0.75f, 0.25f),
 			FVector2D(1.f, 0.25f),
@@ -69,7 +69,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::SnowTexture, TArray<FVector2D>{
+		EMinecraftTextureType::SnowTexture, TArray<FVector2D>{
 			FVector2D(0.25f, 0.25f),
 			FVector2D(0.f, 0.25f),
 			FVector2D(0.f, 0.5f),
@@ -77,7 +77,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::WoodSideTexture, TArray<FVector2D>{
+		EMinecraftTextureType::WoodSideTexture, TArray<FVector2D>{
 			FVector2D(0.5f, 0.25f),
 			FVector2D(0.25f, 0.25f),
 			FVector2D(0.25f, 0.5f),
@@ -85,7 +85,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::WoodTopBottomTexture, TArray<FVector2D>{
+		EMinecraftTextureType::WoodTopBottomTexture, TArray<FVector2D>{
 			FVector2D(0.75f, 0.25f),
 			FVector2D(0.5f, 0.25f),
 			FVector2D(0.5f, 0.5f),
@@ -93,7 +93,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::GrassTopTexture, TArray<FVector2D>{
+		EMinecraftTextureType::GrassTopTexture, TArray<FVector2D>{
 			FVector2D(1.f, 0.25f),
 			FVector2D(0.75f, 0.25f),
 			FVector2D(0.75f, 0.5f),
@@ -101,7 +101,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::BedrockTexture, TArray<FVector2D>{
+		EMinecraftTextureType::BedrockTexture, TArray<FVector2D>{
 			FVector2D(0.5f, 0.5f),
 			FVector2D(0.25f, 0.5f),
 			FVector2D(0.25f, 0.75f),
@@ -109,7 +109,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::SandTexture, TArray<FVector2D>{
+		EMinecraftTextureType::SandTexture, TArray<FVector2D>{
 			FVector2D(0.75f, 0.5f),
 			FVector2D(0.5f, 0.5f),
 			FVector2D(0.5f, 0.75f),
@@ -117,7 +117,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::GreenLeafTexture, TArray<FVector2D>{
+		EMinecraftTextureType::GreenLeafTexture, TArray<FVector2D>{
 			FVector2D(1.f, 0.5f),
 			FVector2D(0.75f, 0.5f),
 			FVector2D(0.75f, 0.75f),
@@ -125,7 +125,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::BirchTopBottomTexture, TArray<FVector2D>{
+		EMinecraftTextureType::BirchTopBottomTexture, TArray<FVector2D>{
 			FVector2D(0.75f, 0.75f),
 			FVector2D(0.5f, 0.75f),
 			FVector2D(0.5f, 1.f),
@@ -133,7 +133,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::BirchSideTexture, TArray<FVector2D>{
+		EMinecraftTextureType::BirchSideTexture, TArray<FVector2D>{
 			FVector2D(0.75f, 0.75f),
 			FVector2D(0.5f, 0.75f),
 			FVector2D(0.5f, 1.f),
@@ -141,7 +141,7 @@ TMap<ETextureType, TArray<FVector2D>> FVoxelData::TextureTypeUVMapping
 		}
 	},
 	{
-		ETextureType::BrownLeafTexture, TArray<FVector2D>{
+		EMinecraftTextureType::BrownLeafTexture, TArray<FVector2D>{
 			FVector2D(1.f, 0.75f),
 			FVector2D(0.75f, 0.75f),
 			FVector2D(0.75f, 1.f),
@@ -155,9 +155,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::BedrockTexture,
-		ETextureType::BedrockTexture,
-		ETextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
 		false,
 		0.f,
 		EBlockType::AirBlock
@@ -165,9 +165,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::BedrockTexture,
-		ETextureType::BedrockTexture,
-		ETextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
+		EMinecraftTextureType::BedrockTexture,
 		true,
 		100.f,
 		EBlockType::BedrockBlock
@@ -175,9 +175,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::StoneTexture,
-		ETextureType::StoneTexture,
-		ETextureType::StoneTexture,
+		EMinecraftTextureType::StoneTexture,
+		EMinecraftTextureType::StoneTexture,
+		EMinecraftTextureType::StoneTexture,
 		true,
 		3.f,
 		EBlockType::StoneBlock
@@ -185,9 +185,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::GrassDirtTexture,
-		ETextureType::GrassTopTexture,
-		ETextureType::DirtTexture,
+		EMinecraftTextureType::GrassDirtTexture,
+		EMinecraftTextureType::GrassTopTexture,
+		EMinecraftTextureType::DirtTexture,
 		true,
 		2.f,
 		EBlockType::GrassBlock
@@ -195,9 +195,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::DirtTexture,
-		ETextureType::DirtTexture,
-		ETextureType::DirtTexture,
+		EMinecraftTextureType::DirtTexture,
+		EMinecraftTextureType::DirtTexture,
+		EMinecraftTextureType::DirtTexture,
 		true,
 		1.5f,
 		EBlockType::DirtBlock
@@ -205,9 +205,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::SandTexture,
-		ETextureType::SandTexture,
-		ETextureType::SandTexture,
+		EMinecraftTextureType::SandTexture,
+		EMinecraftTextureType::SandTexture,
+		EMinecraftTextureType::SandTexture,
 		true,
 		2.f,
 		EBlockType::SandBlock
@@ -215,9 +215,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::SnowDirtTexture,
-		ETextureType::SnowTexture,
-		ETextureType::DirtTexture,
+		EMinecraftTextureType::SnowDirtTexture,
+		EMinecraftTextureType::SnowTexture,
+		EMinecraftTextureType::DirtTexture,
 		true,
 		1.8f,
 		EBlockType::SnowDirtBlock
@@ -225,9 +225,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::SnowTexture,
-		ETextureType::SnowTexture,
-		ETextureType::SnowTexture,
+		EMinecraftTextureType::SnowTexture,
+		EMinecraftTextureType::SnowTexture,
+		EMinecraftTextureType::SnowTexture,
 		true,
 		0.5f,
 		EBlockType::SnowBlock
@@ -235,9 +235,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::WoodSideTexture,
-		ETextureType::WoodTopBottomTexture,
-		ETextureType::WoodTopBottomTexture,
+		EMinecraftTextureType::WoodSideTexture,
+		EMinecraftTextureType::WoodTopBottomTexture,
+		EMinecraftTextureType::WoodTopBottomTexture,
 		true,
 		3.f,
 		EBlockType::WoodBlock
@@ -245,9 +245,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::BirchSideTexture,
-		ETextureType::BirchTopBottomTexture,
-		ETextureType::BirchTopBottomTexture,
+		EMinecraftTextureType::BirchSideTexture,
+		EMinecraftTextureType::BirchTopBottomTexture,
+		EMinecraftTextureType::BirchTopBottomTexture,
 		true,
 		3.f,
 		EBlockType::BirchWood
@@ -255,9 +255,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::GreenLeafTexture,
-		ETextureType::GreenLeafTexture,
-		ETextureType::GreenLeafTexture,
+		EMinecraftTextureType::GreenLeafTexture,
+		EMinecraftTextureType::GreenLeafTexture,
+		EMinecraftTextureType::GreenLeafTexture,
 		true,
 		0.2f,
 		EBlockType::GreenLeaves
@@ -265,9 +265,9 @@ TArray<FVoxel> FVoxelData::VoxelTypes
 	FVoxel
 	{
 		FVector{},
-		ETextureType::BrownLeafTexture,
-		ETextureType::BrownLeafTexture,
-		ETextureType::BrownLeafTexture,
+		EMinecraftTextureType::BrownLeafTexture,
+		EMinecraftTextureType::BrownLeafTexture,
+		EMinecraftTextureType::BrownLeafTexture,
 		true,
 		0.2f,
 		EBlockType::BrownLeaves

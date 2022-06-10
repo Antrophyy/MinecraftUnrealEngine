@@ -4,8 +4,6 @@
 #include "MinecraftGrip/TerrainGeneration/Public/VoxelData.h"
 #include "MinecraftGrip/TerrainGeneration/Public/ChunkLoaderAsync.h"
 #include "MinecraftGrip/TerrainGeneration/Public/Voxel.h"
-
-#include "Chaos/AABB.h"
 #include "Kismet/GameplayStatics.h"
 
 AChunk::AChunk() :
@@ -56,8 +54,8 @@ void AChunk::UpdateChunkWithVoxel(const FVector& Position, const EBlockType InVo
 {
 	FIntVector NewPos = FVectorToFlooredVector(Position);
 
-	NewPos.X -= FMath::FloorToInt(SpawnLocation.X);
-	NewPos.Y -= FMath::FloorToInt(SpawnLocation.Y);
+	NewPos.X -= FMath::FloorToInt((float)SpawnLocation.X);
+	NewPos.Y -= FMath::FloorToInt((float)SpawnLocation.Y);
 
 	ModifyVoxel(NewPos, InVoxelType);
 
@@ -69,8 +67,8 @@ void AChunk::MakeExplosionAt(const FVector& InPositionOfInitialExplosion, const 
 {
 	FIntVector InitialPosition = FVectorToFlooredVector(InPositionOfInitialExplosion);
 
-	InitialPosition.X -= FMath::FloorToInt(SpawnLocation.X);
-	InitialPosition.Y -= FMath::FloorToInt(SpawnLocation.Y);
+	InitialPosition.X -= FMath::FloorToInt((float)SpawnLocation.X);
+	InitialPosition.Y -= FMath::FloorToInt((float)SpawnLocation.Y);
 
 	const int32 HoleExplosionStartIndex = -(InRadius / 2);
 	const int32 HoleExplosionEndIndex = InRadius / 2;
@@ -121,9 +119,9 @@ FIntVector AChunk::FVectorToFlooredVector(const FVector& InFVector)
 {
 	FIntVector FlooredVector{FMath::FloorToInt(InFVector.X), FMath::FloorToInt(InFVector.Y), FMath::FloorToInt(InFVector.Z)};
 
-	FlooredVector.X = FMath::FloorToInt(FlooredVector.X / 100) * 100;
-	FlooredVector.Y = FMath::FloorToInt(FlooredVector.Y / 100) * 100;
-	FlooredVector.Z = FMath::FloorToInt(FlooredVector.Z / 100) * 100;
+	FlooredVector.X = FMath::FloorToInt((float)FlooredVector.X / 100) * 100;
+	FlooredVector.Y = FMath::FloorToInt((float)FlooredVector.Y / 100) * 100;
+	FlooredVector.Z = FMath::FloorToInt((float)FlooredVector.Z / 100) * 100;
 
 	return FlooredVector;
 }
@@ -155,8 +153,8 @@ FVoxel AChunk::GetVoxelFromGlobalFVector(const FVector& InPosition) const
 {
 	FIntVector NewPost = FVectorToFlooredVector(InPosition);
 
-	NewPost.X -= FMath::FloorToInt(SpawnLocation.X);
-	NewPost.Y -= FMath::FloorToInt(SpawnLocation.Y);
+	NewPost.X -= FMath::FloorToInt((float)SpawnLocation.X);
+	NewPost.Y -= FMath::FloorToInt((float)SpawnLocation.Y);
 
 	if (VoxelMap.Contains(NewPost))
 		return VoxelMap.FindRef(NewPost);

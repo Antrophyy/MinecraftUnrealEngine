@@ -31,5 +31,5 @@ struct FVoxelData
 	static TArray<FIntVector> SideChecks;
 	
 	// Every block has different textures for their sides, this will map the texture to specific sides.
-	static TMap<ETextureType, TArray<FVector2D>> TextureTypeUVMapping;
+	static TMap<EMinecraftTextureType, TArray<FVector2D>> TextureTypeUVMapping;
 };

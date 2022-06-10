@@ -105,7 +105,7 @@ void FChunkLoaderAsync::UpdateMeshData(const FIntVector& InPosition)
 			MeshData.Triangles.Add(VertexIndex);
 			MeshData.Triangles.Add(VertexIndex + 3);
 
-			const ETextureType TextureType = FVoxelData::VoxelTypes[BlockID].GetTextureType(i);
+			const EMinecraftTextureType TextureType = FVoxelData::VoxelTypes[BlockID].GetTextureType(i);
 			AddTexture(TextureType);
 
 			VertexIndex += 4;
@@ -113,7 +113,7 @@ void FChunkLoaderAsync::UpdateMeshData(const FIntVector& InPosition)
 	}
 }
 
-void FChunkLoaderAsync::AddTexture(const ETextureType InTextureType)
+void FChunkLoaderAsync::AddTexture(const EMinecraftTextureType InTextureType)
 {
 	MeshData.UVs.Append(FVoxelData::TextureTypeUVMapping.FindRef(InTextureType));
 }
@@ -150,8 +150,8 @@ FVoxel FChunkLoaderAsync::GetVoxelFromWorldPosition(const FVector& InPosition) c
 {
 	FIntVector NewPost = AChunk::FVectorToFlooredVector(InPosition);
 
-	NewPost.X -= FMath::FloorToInt(SpawnPosition.X);
-	NewPost.Y -= FMath::FloorToInt(SpawnPosition.Y);
+	NewPost.X -= FMath::FloorToInt((float)SpawnPosition.X);
+	NewPost.Y -= FMath::FloorToInt((float)SpawnPosition.Y);
 
 	if (MeshData.VoxelMap.Contains(NewPost))
 		return MeshData.VoxelMap.FindRef(NewPost);

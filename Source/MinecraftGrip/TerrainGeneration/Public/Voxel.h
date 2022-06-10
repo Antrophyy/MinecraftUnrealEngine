@@ -21,7 +21,7 @@ struct FVoxel
 	EBlockType DetermineBlockTypeBasedOnHeight() const;
 
 	// Based on the side, the method will return texture type, e.g. side 1 will return side texture.
-	ETextureType GetTextureType(const int32 InSideIndex) const;
+	EMinecraftTextureType GetTextureType(const int32 InSideIndex) const;
 
 	// Based on the current type of the attribute BlockType, assign the properties.
 	void AssignPropertiesBasedOnType();
@@ -30,8 +30,8 @@ struct FVoxel
 	void InitializeVoxel(const FVector& InPosition);
 
 	// Create a specific voxel type that will be used for assigning properties based on type.
-	void InitializeVoxelType(const bool InbIsSolid, const EBlockType InBlockType, const float InDestroyTime, const ETextureType InSideTexture,
-	                         const ETextureType InTopTexture, const ETextureType InBottomTexture);
+	void InitializeVoxelType(const bool InbIsSolid, const EBlockType InBlockType, const float InDestroyTime, const EMinecraftTextureType InSideTexture,
+	                         const EMinecraftTextureType InTopTexture, const EMinecraftTextureType InBottomTexture);
 
 	// Initializes a voxel with any block type. The properties will be assigned based on the type passed.
 	void InitializeSpecificVoxel(const FVector& InPosition, EBlockType InBlockType);
@@ -49,9 +49,9 @@ struct FVoxel
 	EBlockType GenerateBlockBelowGround(const int32 InCurrentPosition,const int32 InHighestBlockPosition,const EBlockType InVoxelType) const;
 
 	FVector PositionInChunk;
-	ETextureType SideTexture;
-	ETextureType TopTexture;
-	ETextureType BottomTexture;
+	EMinecraftTextureType SideTexture;
+	EMinecraftTextureType TopTexture;
+	EMinecraftTextureType BottomTexture;
 	bool bIsSolid;
 	float DestroyTime;
 	

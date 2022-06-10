@@ -41,7 +41,7 @@ private: // Prepare data for rendering
 	void PopulateVoxelMap();
 	void GenerateVertices();
 	void UpdateMeshData(const FIntVector& InPosition);
-	void AddTexture(const ETextureType InTextureType);
+	void AddTexture(const EMinecraftTextureType InTextureType);
 
 private: // Checks for populating mesh data
 	bool IsVoxelSideOccupied(const FVector& InPosition) const;

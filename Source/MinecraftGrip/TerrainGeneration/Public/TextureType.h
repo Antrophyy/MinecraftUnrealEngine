@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 UENUM()
-enum class ETextureType : uint8
+enum class EMinecraftTextureType : uint8
 {
 	StoneTexture UMETA(DisplayName = "StoneTexture"),
 	DirtTexture UMETA(DisplayName = "DirtTexture"),
