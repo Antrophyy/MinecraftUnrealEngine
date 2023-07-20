@@ -1,9 +1,10 @@
 ﻿#pragma once
 
-#include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-
 #include "BlockPlacer.generated.h"
+
+class UStaticMeshComponent;
+class UStaticMesh;
 
 /**
  * Class used for creating a transparent block that can be placed on the map to visualize what block will be digged.

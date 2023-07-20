@@ -5,10 +5,14 @@
 
 #include "AIController.h"
 #include "NavigationSystem.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Materials/Material.h"
 #include "NavMesh/NavMeshBoundsVolume.h"
 #include "Perception/PawnSensingComponent.h"
+#include "Sound/SoundWave.h"
+#include "UObject/ConstructorHelpers.h"
 
 ACreeperController::ACreeperController():
 	TimeUntilExplosion(2.5f),

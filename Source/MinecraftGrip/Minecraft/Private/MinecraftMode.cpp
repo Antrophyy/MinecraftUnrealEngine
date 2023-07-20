@@ -6,6 +6,7 @@
 #include "MinecraftGrip/TerrainGeneration/Public/GameWorld.h"
 
 #include "Kismet/GameplayStatics.h"
+#include "UObject/ConstructorHelpers.h"
 
 AMinecraftMode::AMinecraftMode()
 {

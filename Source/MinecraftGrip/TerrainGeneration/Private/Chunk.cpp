@@ -5,8 +5,9 @@
 #include "MinecraftGrip/TerrainGeneration/Public/ChunkLoaderAsync.h"
 #include "MinecraftGrip/TerrainGeneration/Public/Voxel.h"
 
-#include "Chaos/AABB.h"
 #include "Kismet/GameplayStatics.h"
+#include "Materials/Material.h"
+#include "UObject/ConstructorHelpers.h"
 
 AChunk::AChunk() :
 	bIsVoxelMapPopulated(false)

@@ -9,6 +9,9 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "EngineUtils.h"
+#include "Animation/AnimInstance.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Materials/Material.h"
 
 APlayerManager::APlayerManager() :
 	SelectedBlockIndex(1),

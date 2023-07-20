@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include "UObject/ObjectMacros.h"
+
 UENUM()
 enum class EBlockType : uint8
 {

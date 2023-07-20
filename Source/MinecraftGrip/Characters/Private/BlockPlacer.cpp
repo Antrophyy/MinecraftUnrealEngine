@@ -1,5 +1,10 @@
 ﻿#include "MinecraftGrip/Characters/Public/BlockPlacer.h"
 
+#include "Components/StaticMeshComponent.h"
+#include "Engine/StaticMesh.h"
+#include "Materials/Material.h"
+#include "UObject/ConstructorHelpers.h"
+
 ABlockPlacer::ABlockPlacer()
 {
 	PrimaryActorTick.bCanEverTick = false;
